@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 		},
 		concat: {
 			js: {
-				src: ['script.js', 'server.js'],
+				src: ['src/app.js', 'src/server.js'],
 				dest: 'build/js/scripts.js'
 
 			},
