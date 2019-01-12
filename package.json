@@ -1,0 +1,30 @@
+{
+  "name": "angularjs-app",
+  "version": "1.0.0",
+  "description": "AngularJS App",
+  "dependencies": {
+    "angular": "^1.7.0",
+    "angular-route": "^1.7.0",
+    "express": "^4.16.4",
+    "reload": "^2.4.0"
+  },
+  "engine": "node >=0.6.x",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "scripts": {
+    "test": "test",
+    "start": "node src/server.js",
+    "less": "lessc src/styles/less/main.less src/styles/css/main.css"
+  },
+  "main": "server.js",
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "Anna Kazmierczak",
+  "license": "ISC"
+}
