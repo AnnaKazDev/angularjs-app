@@ -1,0 +1,43 @@
+@import 'colors';
+
+nav.navbar {
+  padding: 0 10%;
+  margin-bottom: 0;
+  background-color: @color-white;
+  .navbar-brand {
+    img {
+      width: auto;
+      height: 4rem;
+    }
+  }
+  .navbar-nav {
+    li {
+      position: relative;
+      a {
+        color: @color-black;
+        padding-bottom: 1rem;
+        &:focus, &:hover {
+          background-color: @color-transparent;
+        }
+      }
+    }
+  }
+  ul.active :before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    border-bottom: 3px solid @color-orange_dark;
+  }
+  ul.active {
+    a {
+      color: @color-orange_dark;
+    }
+  }
+}
+
+
+

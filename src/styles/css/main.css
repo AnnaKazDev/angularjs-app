@@ -1,0 +1,28 @@
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #282828;
+  color: #ffffff;
+  text-align: center;
+  height: 7rem;
+}
+footer div {
+  width: 15rem;
+  border-top: 0.5px solid #F8F8F8;
+  padding-top: 1rem;
+  font-weight: 100;
+  margin-top: 2rem;
+  display: inline-block;
+}
+footer div p {
+  font-size: 1rem;
+}
+nav {
+  background-color: #ffffff;
+}
+body {
+  background-color: #F8F8F8;
+  font: 1rem/1.6 'roboto', sans-serif;
+}

@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', ['ngRoute']);
 
-myApp.config(function($routeProvider) {
+myApp.config(function ($routeProvider) {
 	$routeProvider
 
 
@@ -24,12 +24,21 @@ myApp.config(function($routeProvider) {
 });
 
 
-myApp.controller('mainController', function($scope) {
-	$scope.message = 'about page';
+myApp.controller('mainController', function ($scope) {
+
+	$scope.menuItems = [
+		{name: 'about us'.toUpperCase(), url: '#!about'},
+		{name: 'skicams'.toUpperCase(), url: '#!skicams'},
+		{name: 'contact'.toUpperCase(), url: '#!contact'}];
+	$scope.activeMenu = $scope.menuItems[0];
+	$scope.setActive = function (menuItem) {
+		$scope.activeMenu = menuItem
+	};
+
 });
-myApp.controller('contactController', function($scope) {
+myApp.controller('contactController', function ($scope) {
 	$scope.message = 'contact page';
 });
-myApp.controller('skicamsController', function($scope) {
+myApp.controller('skicamsController', function ($scope) {
 	$scope.message = 'skicam page';
 });
