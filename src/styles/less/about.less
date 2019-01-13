@@ -1,5 +1,39 @@
+@import 'breakpoints';
+
 section.about {
-  .thumbnail {
-    margin-bottom: 2rem;
+.card-deck {
+  color: @color-gray_dark;
+  @media @xs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  .card {
+    box-shadow: 0 .2rem 1rem rgba(0,0,0,.15);
+    //@media @sm {
+    //  margin: 0 0.2rem;
+    //}
+    @media @xs {
+      width: 80%;
+
+    }
+    .card-img-top {
+      border-radius: 0;
+    }
+    .card-body {
+      .card-title {
+        font-size: 1rem;
+        @media @sm {
+          font-size: 0.9rem;
+        }
+      }
+      .card-text {
+        font-size: 0.7rem;
+        @media @sm {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
 }
