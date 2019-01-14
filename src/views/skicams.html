@@ -3,10 +3,10 @@
         <div class="card">
             <div class="card-body">
                 <p class="card-subtitle date">{{currentDate | date : 'dd-MM-yyyy'}}</p>
-                <p class="card-title place">Brusson</p>
-            <div ng-repeat="brussonImg in brussonImgs">
-                <img ng-src="{{brussonImg}}">
-            </div>
+                <p class="card-title place">{{firstPlaceWithCams}}</p>
+                <div ng-repeat="firstSetImg in firstSetImgs">
+                    <img ng-src="{{firstSetImg}}" alt="Ski camera">
+                </div>
             </div>
         </div>
     </div>
@@ -14,10 +14,10 @@
         <div class="card">
             <div class="card-body">
                 <p class="card-subtitle date">{{currentDate | date : 'dd-MM-yyyy'}}</p>
-                <p class="card-title place">Piani di Bobbio</p>
-            <div ng-repeat="pianiDiBobbioImg in pianiDiBobbioImgs">
-                <img ng-src="{{pianiDiBobbioImg}}">
-            </div>
+                <p class="card-title place">{{secondPlaceWithCams}}</p>
+                <div ng-repeat="secondSetImg in secondSetImgs">
+                    <img ng-src="{{secondSetImg}}" alt="Ski camera">
+                </div>
             </div>
         </div>
     </div>
