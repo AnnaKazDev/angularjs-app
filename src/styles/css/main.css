@@ -247,28 +247,6 @@ section.contact .card-section .card .card-body {
 section.contact .card-section .card .card-body form div:nth-of-type(3) {
   padding-top: 3rem;
 }
-section.contact .card-section .card .card-body form div:nth-of-type(3)::after {
-  content: none;
-}
-section.contact .card-section .card .card-body form .form-group {
-  position: relative;
-}
-section.contact .card-section .card .card-body form .form-group::after {
-  content: '*';
-  position: absolute;
-  top: 0.5rem;
-  left: 2.1rem;
-  color: #ff0000;
-  font-size: 0.7rem;
-}
-section.contact .card-section .card .card-body form .form-group.has-error::after {
-  content: none;
-  position: absolute;
-  top: 0.5rem;
-  left: 2.1rem;
-  color: transparent;
-  font-size: 0.7rem;
-}
 section.contact .card-section .card .card-body form input {
   font-size: 0.75em;
   padding-left: 0;
@@ -292,6 +270,10 @@ section.contact .card-section .card .card-body form button {
   color: #ffffff;
   width: 5rem;
   float: right;
+}
+section.contact .card-section .card .card-body form .alert-success {
+  font-size: 0.8rem;
+  text-align: center;
 }
 html {
   height: 100%;

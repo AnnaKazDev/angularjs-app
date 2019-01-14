@@ -25,28 +25,7 @@ section.contact {
         form {
           div:nth-of-type(3) {
             padding-top: 3rem;
-            &::after {
-              content: none;
-            }
-          }
-          .form-group {
-            position: relative;
-          }
-          .form-group::after {
-            content: '*';
-            position: absolute;
-            top: 0.5rem;
-            left: 2.1rem;;
-            color: @color-red;
-            font-size: 0.7rem;
-          }
-          .form-group.has-error::after {
-            content: none;
-            position: absolute;
-            top: 0.5rem;
-            left: 2.1rem;
-            color: @color-transparent;
-            font-size: 0.7rem;
+
           }
           input {
             font-size: 0.75em;
@@ -71,6 +50,10 @@ section.contact {
             color: @color-white;
             width: 5rem;
             float: right;
+          }
+          .alert-success {
+            font-size: 0.8rem;
+            text-align: center;
           }
         }
       }
