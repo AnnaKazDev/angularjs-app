@@ -56,23 +56,23 @@ myApp.controller('skicamsController', function ($scope, $http) {
 			}
 		}).then(function (res) {
 			$scope.skiCams = res.data;
+			$scope.firstPlaceWithCams = 'Brusson';
+			$scope.secondPlaceWithCams = 'Piani di Bobbio';
 			for (var key in $scope.skiCams) {
-				if ($scope.skiCams[key].name === 'Brusson') {
-					$scope.brussonCams = $scope.skiCams[key].cams;
-					if (Object.keys($scope.brussonCams).length > 1) {
-						$scope.brussonImgs = [];
+				if ($scope.skiCams[key].name === $scope.firstPlaceWithCams) {
+					$scope.firstSetOfCams = $scope.skiCams[key].cams;
+					if (Object.keys($scope.firstSetOfCams).length > 1) {
+						$scope.firstSetImgs = [];
 						for (var i = 0; i < 2; i++) {
-							$scope.brussonImgs.push($scope.brussonCams[Object.keys($scope.brussonCams)[i]].url)
+							$scope.firstSetImgs.push($scope.firstSetOfCams[Object.keys($scope.firstSetOfCams)[i]].url)
 						}
 					}
-
-				} else if ($scope.skiCams[key].name === 'Piani di Bobbio') {
-					$scope.pianiDiBobbioCams = $scope.skiCams[key].cams;
-					if (Object.keys($scope.pianiDiBobbioCams).length > 1) {
-						$scope.pianiDiBobbioImgs = [];
+				} else if ($scope.skiCams[key].name === $scope.secondPlaceWithCams) {
+					$scope.secondSetOfCams = $scope.skiCams[key].cams;
+					if (Object.keys($scope.secondSetOfCams).length > 1) {
+						$scope.secondSetImgs = [];
 						for (var i = 0; i < 2; i++) {
-							$scope.pianiDiBobbioImgs.push(
-								$scope.pianiDiBobbioCams[Object.keys($scope.pianiDiBobbioCams)[i]].url)
+							$scope.secondSetImgs.push($scope.secondSetOfCams[Object.keys($scope.secondSetOfCams)[i]].url)
 						}
 					}
 				}
