@@ -37,10 +37,24 @@ myApp.controller('mainController', function ($scope) {
 myApp.controller('contactController', function ($scope) {
 
 	$scope.submitForm = function () {
-		if ($scope.userForm.$valid) {
-			alert('Thank you for sending info!');
+		$scope.errorName = false;
+		$scope.errorEmail = false;
+		$scope.formSent = false;
+		if ($scope.userForm.name.$invalid) {
+			$scope.errorName = true;
+		}
+		if ($scope.userForm.email.$invalid) {
+			$scope.errorEmail = true;
 		}
 	};
+
+	$scope.save = function () {
+		$scope.submitForm();
+		if ($scope.userForm.$valid) {
+			$scope.formSent = true;
+			$scope.message = 'Thank you for sending info!';
+		}
+	}
 
 });
 
@@ -83,4 +97,5 @@ myApp.controller('skicamsController', function ($scope, $http) {
 		});
 	};
 	$scope.getSkiCams();
+
 });
