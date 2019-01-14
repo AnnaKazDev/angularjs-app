@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Awesome AngularJS App</title>
-    <meta content="width=device-width" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- STYLES -->
     <link rel="stylesheet" type="text/css" href="styles/css/main.css">
     <link rel="stylesheet/less" type="text/css" href="styles/less/main.less"/>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css"/>
     <!-- -->
 
@@ -27,15 +27,15 @@
 <body ng-controller="mainController">
 
 <nav class="navbar">
-    <div class="container">
+    <div class="container menu-logo">
         <div class="navbar-header">
             <div class="navbar-brand"><img alt="PGS Software logo" src="assets/img/pgs_logo.png"></div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container menu-items">
         <div ng-repeat='item in menuItems'>
-            <ul class="nav navbar-nav navbar-left" ng-class="{active : activeMenu === item}">
+            <ul class="nav navbar-nav" ng-class="{active : activeMenu === item}">
                 <li>
                     <a ng-href="{{item.url}}" ng-click="setActive(item)"> {{item.name}}
                     </a>
