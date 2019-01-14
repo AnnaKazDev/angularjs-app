@@ -21,7 +21,6 @@ myApp.config(function ($routeProvider) {
 
 });
 
-
 myApp.controller('mainController', function ($scope) {
 
 	$scope.menuItems = [
@@ -34,15 +33,17 @@ myApp.controller('mainController', function ($scope) {
 	};
 
 });
+
 myApp.controller('contactController', function ($scope) {
 
 	$scope.submitForm = function () {
 		if ($scope.userForm.$valid) {
-			alert('Thank you!');
+			alert('Thank you for sending info!');
 		}
 	};
 
 });
+
 myApp.controller('skicamsController', function ($scope, $http) {
 
 	$scope.currentDate = new Date();
@@ -77,7 +78,7 @@ myApp.controller('skicamsController', function ($scope, $http) {
 				}
 			}
 		}, function (rej) {
-			alert('There is a problem with displaying the cameras. Please try again later.')
+			alert('There is a problem with displaying the cameras. Please try again later.');
 			console.error('Error: ' + rej.data.message)
 		});
 	};
