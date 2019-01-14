@@ -1,26 +1,34 @@
 <section class="contact">
     <div class="card-section">
-    <div class="card shadow-sm">
-        <div class="card-body">
+        <div class="card shadow-sm">
+            <div class="card-body">
 
-            <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
-                <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && userForm.name.$pristine }">
-                    <input type="text" name="name" class="form-control" ng-model="user.name" placeholder="Name" required>
-                    <p ng-show="(userForm.name.$invalid && !userForm.name.$pristine)" class="help-block">Name is required.</p>
-                </div>
+                <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                        <input type="text" name="name" class="form-control" ng-model="user.name" placeholder="Name"
+                               required>
+                        <p ng-if="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Name is
+                            required.</p>
+                    </div>
 
-                <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-                    <input type="email" name="email" class="form-control" ng-model="user.email" placeholder="Email" required>
-                    <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
-                </div>
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                        <input type="email" name="email" class="form-control" ng-model="user.email" placeholder="Email"
+                               required>
+                        <p ng-if="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid
+                            email.</p>
+                    </div>
 
-                <div class="form-group" ng-class="{ 'has-error' : userForm.message.$invalid && !userForm.message.$pristine }">
-                    <input type="text" name="message" class="form-control" ng-model="user.message" placeholder="Message">
-                </div>
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : userForm.message.$invalid && !userForm.message.$pristine }">
+                        <input type="text" name="message" class="form-control" ng-model="user.message"
+                               placeholder="Message">
+                    </div>
 
-                <button type="submit" class="btn btn-sm">SEND</button>
-            </form>
+                    <button type="submit" class="btn btn-sm">SEND</button>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
 </section>
