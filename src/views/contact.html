@@ -1,29 +1,26 @@
-<div class="jumbotron text-center">
-    <h1>Contact Us!</h1>
+<section class="contact">
+    <div class="card-section">
+    <div class="card shadow-sm">
+        <div class="card-body">
 
-    <header>
+            <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+                <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && userForm.name.$pristine }">
+                    <input type="text" name="name" class="form-control" ng-model="user.name" placeholder="Name" required>
+                    <p ng-show="(userForm.name.$invalid && !userForm.name.$pristine)" class="help-block">Name is required.</p>
+                </div>
 
-    </header>
-    <section>
-        <div class="arrow-up"></div>
-        <form id="contact" class="form-horizontal" role="form">
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input id="name" name="name" type="text" placeholder="NAME" class="form-control">
+                <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                    <input type="email" name="email" class="form-control" ng-model="user.email" placeholder="Email" required>
+                    <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <input id="email" name="email" type="email" placeholder="EMAIL" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <textarea class="form-control" id="message" name="message" placeholder="MESSAGE"></textarea>
-                </div>
-            </div>
 
-            <a href="#" class="myButton">send</a>
-        </form>
-    </section>
-</div>
+                <div class="form-group" ng-class="{ 'has-error' : userForm.message.$invalid && !userForm.message.$pristine }">
+                    <input type="text" name="message" class="form-control" ng-model="user.message" placeholder="Message">
+                </div>
+
+                <button type="submit" class="btn btn-sm">SEND</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>

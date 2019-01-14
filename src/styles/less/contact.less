@@ -1,0 +1,76 @@
+section.contact {
+  @height: calc(100vh - 15rem);
+  height: @height;
+  .card-section {
+    .card {
+      width: 26rem;
+      margin: 0 auto;
+      @media @xs {
+        width: 100%;
+      }
+      .card-body {
+        padding: 3rem;
+        @media @xs {
+          padding: 2rem;
+        }
+        form {
+          div:nth-of-type(3) {
+            padding-top: 3rem;
+            &::after {
+              content: none;
+            }
+          }
+          .form-group {
+            position: relative;
+          }
+          .form-group::after {
+            content: '*';
+            position: absolute;
+            top: 0.5rem;
+            left: 2.1rem;;
+            color: @color-red;
+            font-size: 0.7rem;
+          }
+          .form-group::after:focus {
+            content: none;
+            position: absolute;
+            top: 0.5rem;
+            left: 2.1rem;
+            color: @color-transparent;
+            font-size: 0.7rem;
+          }
+          input {
+            font-size: 0.75em;
+            padding-left: 0;
+            outline: 0;
+            border-width: 0 0 2px;
+            border-bottom: 2px solid @color-gray_light;
+            border-radius: 0;
+          }
+          .form-control:focus {
+            border-color: @color-orange_dark;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset, 0 0 8px rgba(0, 0, 0, 0);
+            outline: 0 none;
+          }
+          .help-block {
+            color: @color-red;
+            font-size: 0.6rem;
+            padding-top: 0.2rem;
+          }
+          button {
+            background-color: @color-blue-light;
+            color: @color-white;
+            width: 5rem;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

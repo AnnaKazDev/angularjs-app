@@ -37,7 +37,13 @@ myApp.controller('mainController', function ($scope) {
 
 });
 myApp.controller('contactController', function ($scope) {
-	$scope.message = 'contact page';
+
+	$scope.submitForm = function () {
+		if ($scope.userForm.$valid) {
+			alert('Thank you!');
+		}
+	};
+
 });
 myApp.controller('skicamsController', function ($scope) {
 	$scope.message = 'skicam page';
