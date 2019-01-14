@@ -8,15 +8,36 @@ footer {
   color: @color-white;
   text-align: center;
   height: 7rem;
+  @media @sm {
+    height: 5.5rem;
+  }
+  @media @xs {
+    height: 4rem;
+  }
   div {
     width: 15rem;
-    border-top: 0.5px solid @color-gray_light;
+    border-top: 1px solid @color-gray-transparency;
     padding-top: 1rem;
     font-weight: 100;
     margin-top: 2rem;
     display: inline-block;
+    @media @sm {
+      width: 10.5rem;
+      margin-top: 1rem;
+    }
+    @media @xs {
+      width: 8rem;
+      padding-top: 0.6rem;
+      margin-top: 0.8rem;
+    }
     p {
       font-size: 1rem;
+      @media @sm {
+        font-size: 0.9em;
+      }
+      @media @xs {
+        font-size: 0.6em;
+      }
     }
   }
 }

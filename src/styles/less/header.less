@@ -1,40 +1,79 @@
 @import 'colors';
+@import 'breakpoints';
 
 nav.navbar {
+  border-bottom: 1px solid @color-gray-transparency;
+  border-radius: 0;
   padding: 0 10%;
   margin-bottom: 0;
   background-color: @color-white;
-  .navbar-brand {
-    img {
-      width: auto;
-      height: 4rem;
-    }
+  @media @sm {
+    padding: 0 7%;
+    font-size: 0.9em;
   }
-  .navbar-nav {
-    li {
-      position: relative;
-      a {
-        color: @color-black;
-        padding-bottom: 1rem;
-        &:focus, &:hover {
-          background-color: @color-transparent;
+  @media @xs {
+    //padding: 0 5% 8rem 5%;
+    //padding: 0 5%;
+    font-size: 0.8em;
+  }
+
+  .container.menu-logo {
+    padding: 1.5rem 0;
+    @media @xs {
+      justify-content: center;
+    }
+    .navbar-header {
+      .navbar-brand {
+        img {
+          width: auto;
+          height: 3.5rem;
+          @media @xs {
+            height: 2.5rem;
+          }
         }
       }
     }
   }
-  ul.active :before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    right: 20%;
-    height: 2px;
-    border-bottom: 3px solid @color-orange_dark;
-  }
-  ul.active {
-    a {
-      color: @color-orange_dark;
+  .container.menu-items {
+    justify-content: flex-start;
+    padding-left: 0;
+    @media @xs {
+      padding: 0;
+      justify-content: space-around;
+    }
+    .navbar-nav {
+      padding-right: 2rem;
+      @media @xs {
+        padding-right: 0.2rem;
+      }
+      li {
+        position: relative;
+        line-height: 2rem;
+        a {
+          text-decoration:none;
+          color: @color-black;
+          font-weight: 300;
+          padding-bottom: 1rem;
+          &:focus, &:hover {
+            background-color: @color-transparent;
+          }
+        }
+      }
+    }
+    ul.active :before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -0.1rem;
+      left: 0;
+      right: 0;
+      height: 2px;
+      border-bottom: 3px solid @color-orange_dark;
+    }
+    ul.active {
+      a {
+        color: @color-orange_dark;
+      }
     }
   }
 }

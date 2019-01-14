@@ -2,23 +2,31 @@
 @import 'footer';
 @import 'header';
 @import 'about';
+@import 'contact';
+@import 'breakpoints';
 
-body {
-  background-color: @color-gray_light;
-  font: 1rem/1.6 'roboto', sans-serif;
-  color: @color-gray_light;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  main {
-    flex: 1 0 auto;
-    padding: 0 10% 7rem;
+html {
+  height: 100%;
+  body {
     background-color: @color-gray_light;
-  }
-  section {
-    padding-top: 3rem;
+    color: @color-gray_dark;
+    font: 1rem/1.6 'roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 600px;
+    width: 100%;
+    main {
+      flex: 1 0 auto;
+      padding: 0 10% 7rem;
+      background-color: @color-gray_light;
+      @media @xs {
+        //padding: 0 5% 7rem;
+        //margin-top: 8rem;
+      }
+    }
+    section {
+      padding-top: 2rem;
+    }
   }
 }
