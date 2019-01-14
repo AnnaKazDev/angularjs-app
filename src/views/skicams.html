@@ -1,6 +1,24 @@
-<div class="jumbotron text-center">
-    <h1>Home Page</h1>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto atque consequatur dignissimos distinctio dolor harum hic illo illum impedit minus mollitia nemo neque reiciendis repellat, tenetur vero voluptatem voluptatibus?</p>
-
-</div>
+<section class="skicams">
+    <div class="skicam shadow-sm">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-subtitle date">{{currentDate | date : 'dd-MM-yyyy'}}</p>
+                <p class="card-title place">Brusson</p>
+            <div ng-repeat="brussonImg in brussonImgs">
+                <img ng-src="{{brussonImg}}">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="skicam shadow-sm">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-subtitle date">{{currentDate | date : 'dd-MM-yyyy'}}</p>
+                <p class="card-title place">Piani di Bobbio</p>
+            <div ng-repeat="pianiDiBobbioImg in pianiDiBobbioImgs">
+                <img ng-src="{{pianiDiBobbioImg}}">
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
